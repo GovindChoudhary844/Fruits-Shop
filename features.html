@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features || Fruits</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lora&family=Oswald:wght@300&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="Images/icon" href="Images/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="Fonts/CSS/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="Fonts/CSS/fontawesome.min.css">
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+  <!-- =====================JS=================== -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+  crossorigin="anonymous"></script>
+  <!-- =====================JS End=================== -->
+
+  <!----------------------- navbar ----------------------->
+  <section class="menu">
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+      <div class="container-fluid">
+        <!-- logo -->
+        <a class="navbar-brand" href="index.html">
+          <img src="Images/logo.png" style="height: 10vh;">Fruits</a>
+        </a>
+        <!-- Toggle button -->
+        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Sidebar -->
+        <div class="sidebar offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              <img src="Images/logo.png" style="height: 50px;">Fruits</a>
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Products.html">Products</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  More
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="Blog.html">Blog Grid</a></li>
+                  <li><a class="dropdown-item" href="features.html">Our Features</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="navicons">
+              <button class="btn btn-light btn-sm" data-dismiss="navicons">
+                <i class="fa-solid fa-magnifying-glass" style="color: black;"></i>
+              </button>
+              <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#Login">
+                <i class="fa-solid fa-user" style="color: #000000;"></i>
+              </button>
+              <button class="btn btn-light btn-sm">
+                <i class="fa-solid fa-bag-shopping" style="color: #000000;"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <!-- Login The Modal -->
+  <div class="modal" id="Login">
+
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h1 class="modal-title">Login</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h4>Full Name</h4>
+          <input type="text" id="Log-Name" class="form-control" placeholder="Name Here...">
+          <h4>Email</h4>
+          <input type="Email" id="Log-Email" class="form-control" placeholder="Email...">
+          <h4>Password</h4>
+          <input type="password" id="Log-Pass" class="form-control" placeholder="Password"><br>
+          <a href="#" class="forget-pass">Forget Password</a>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <p>Already have an Account?
+            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#SignUp"
+              onclick="SignUp()" data-dismiss="modal">SignUp
+            </button>
+          </p>
+          <button type="button" class="btn btn-dark" data-bs-dismiss="Login" onclick="Login()">Login</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- SignUp The Modal -->
+  <div class="modal" id="SignUp">
+
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- SignUp Modal Header -->
+        <div class="modal-header">
+          <h1 class="modal-title">SignUp</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- SignUp Modal body -->
+        <div class="modal-body">
+          <h4>First Name</h4>
+          <input type="text" id="Sign-FName" class="form-control" placeholder="First Name">
+          <h4>Last Name</h4>
+          <input type="text" id="Sign-LName" class="form-control" placeholder="Last Name">
+          <h4>Email</h4>
+          <input type="Email" id="Sign-Email" class="form-control" placeholder="Email...">
+          <h4>Password</h4>
+          <input type="password" id="Sign-Pass" class="form-control" placeholder="Password">
+          <h4>Confirm Password</h4>
+          <input type="password" id="Sign-CPass" class="form-control" placeholder="Confirm Password">
+        </div>
+
+        <!-- SignUp Modal footer -->
+        <div class="modal-footer">
+          <p>Already have an Account?
+            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#SignUp"
+              onclick="Login()">Login</button>
+          </p>
+          <button type="button" class="btn btn-dark" data-bs-dismiss="SignUp" onclick="SignUp()">SignUp</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ------------------------top-----------------------------   -->
+  <section class="about-top">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="container p-5 mt-5">
+          <div class="row mt-5">
+            <div class="col-lg-6 p-5 m-auto text-center">
+              <h1 style="font-size: 70px; color: white;">Our Features</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--------------------------Our Features----------------------------- -->
+  <section class="Features">
+    <div class="container mt-5">
+      <div class="row feat-top mt-5">
+        <div class="col-lg-5 p-5 text-center m-auto">
+          <div class="line"></div>
+          <div class="line1"></div>
+          <h1>Our Features</h1>
+          <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------Card----------------------------- -->
+    <section class="feature-card">
+      <div class="container-fluid mb-5">
+        <div class="row p-3">
+          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-9 col-xs-9 p-2">
+            <div class="card card1 text-center">
+              <img src="Images/natural.png">
+              <div class="card-body">
+                <h5 class="card-title">Natural Process</h5>
+                <p class="card-text">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero
+                  dolor duo.</p>
+                <a href="#" class="btn btn-outline-success">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-9 col-xs-9 p-2">
+            <div class="card card1 text-center">
+              <img src="Images/natural.png">
+              <div class="card-body">
+                <h5 class="card-title">Organic Products</h5>
+                <p class="card-text">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero
+                  dolor duo.</p>
+                <a href="#" class="btn btn-outline-success">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-9 col-xs-9 p-2">
+            <div class="card card1 text-center">
+              <img src="Images/natural.png">
+              <div class="card-body">
+                <h5 class="card-title">Biologically Safe</h5>
+                <p class="card-text">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero
+                  dolor duo.</p>
+                <a href="#" class="btn btn-outline-success">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <!--------------------------Our Review----------------------------- -->
+  <section class="Review-main">
+    <div class="container mt-5">
+      <div class="row mt-5">
+        <div class="col-lg-5 p-5 text-center m-auto">
+          <div class="line"></div>
+          <div class="line1"></div>
+          <h1>Customer Review</h1>
+          <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+        </div>
+      </div>
+    </div>
+    <!-- --------------------------------------------------------- -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-9 col-xs-9 rev-box">
+          <div class="card bg-light p-3">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptates nisi rem velit laudantium?
+              Doloribus quis aliquid unde et vero.</p>
+            <div class="row revimg">
+              <div class="col-lg-4">
+                <img src="Images/strowberry.jpg">
+              </div>
+              <div class="col-lg-4">
+                <h6>Client Name</h6>
+                <p>Profession</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-9 col-xs-9 rev-box">
+          <div class="card bg-success p-3">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptates nisi rem velit laudantium?
+              Doloribus quis aliquid unde et vero.</p>
+            <div class="row revimg">
+              <div class="col-lg-4">
+                <img src="Images/strowberry.jpg">
+              </div>
+              <div class="col-lg-4">
+                <h6>Client Name</h6>
+                <p>Profession</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-9 col-xs-9 rev-box">
+          <div class="card bg-light p-3">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptates nisi rem velit laudantium?
+              Doloribus quis aliquid unde et vero.</p>
+            <div class="row revimg">
+              <div class="col-lg-4">
+                <img src="Images/strowberry.jpg">
+              </div>
+              <div class="col-lg-4">
+                <h6>Client Name</h6>
+                <p>Profession</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--------------------------Latest Blog----------------------------- -->
+  <section class="Review-main">
+    <div class="container mt-5">
+      <div class="row mt-5">
+        <div class="col-lg-5 p-5 text-center m-auto">
+          <div class="line"></div>
+          <div class="line1"></div>
+          <h1>Latest Blog</h1>
+          <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row p-5">
+        <div class="col-lg-4 blog-box">
+          <div class="card">
+            <img src="Images/Latest Blog/blog-1.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+              <div class="row">
+                <div class="col-lg-3">
+                  <small class="text-muted">
+                    <i class="fa-solid fa-user" style="color: #14d721;"></i> Admin</small>
+                </div>
+                <div class="col-lg-9">
+                  <small class="text-muted">
+                    <i class="fa-solid fa-calendar-days" style="color: #14d721;"></i> 22 July, 2023</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 blog-box">
+          <div class="card">
+            <img src="Images/Latest Blog/blog-2.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+              <div class="row">
+                <div class="col-lg-3">
+                  <small class="text-muted">
+                    <i class="fa-solid fa-user" style="color: #14d721;"></i> Admin</small>
+                </div>
+                <div class="col-lg-9">
+                  <small class="text-muted">
+                    <i class="fa-solid fa-calendar-days" style="color: #14d721;"></i> 22 July, 2023</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 blog-box">
+          <div class="card">
+            <img src="Images/Latest Blog/blog-3.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+              <div class="row">
+                <div class="col-lg-3">
+                  <small class="text-muted">
+                    <i class="fa-solid fa-user" style="color: #14d721;"></i> Admin</small>
+                </div>
+                <div class="col-lg-9">
+                  <small class="text-muted">
+                    <i class="fa-solid fa-calendar-days" style="color: #14d721;"></i> 22 July, 2023</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ------------------------Footer----------------------------- -->
+  <section class="footer-main bg-dark">
+    <div class="container bg-dark">
+      <div class="row">
+        <!-- =============1=============== -->
+        <div class="footer-1 col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-3 col-xs-3">
+          <div class="f1-top">
+            <div class="f1-top-apple bg-dark"><img src="Images/logo.png"></div>
+            <div class="f1-top-r">
+              <h5>Fruits</h5>
+            </div>
+            <div class="f1-bottom-top">
+              <p class="text-muted">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat
+                ipsum et lorem et sit, sed stet lorem sit clita</p>
+            </div>
+            <div class="f1-bottom-icon">
+              <span><i class="fa-brands fa-facebook fa-2xl"></i></span>
+              <span><i class="fa-brands fa-youtube fa-2xl"></i></span>
+              <span><i class="fa-brands fa-twitter fa-2xl"></i></span>
+              <span><i class="fa-brands fa-linkedin fa-2xl"></i></span>
+            </div>
+          </div>
+        </div>
+        <!-- =============2=============== -->
+        <div class="footer-2 col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-3 col-xs-3">
+          <div class="f2-top">
+            <h5>Address</h5>
+          </div>
+          <div class="f2-bottom">
+            <i class="fa-solid fa-location-dot"></i>
+            <a
+              href="https://www.google.com/maps/place/Aali+Vihar,+Sarita+Vihar,+Ali,+New+Delhi,+Delhi+110076/@28.5195881,77.3035786,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce6bf03f4914d:0x427871aa9332abc6!8m2!3d28.5195381!4d77.3060981!16s%2Fg%2F11dylvrgkz?entry=ttu"></i>
+              B-15 Aali Vihar Sarita Vihar New Delhi
+            </a>
+            <br><br>
+            <i class="fa-solid fa-phone"></i><a href="#"> +91 8595677844</a> <br><br>
+            <i class="fa-solid fa-envelope"></i><a href="#"> govindchoudhary844@gmail.com</a>
+          </div>
+        </div>
+        <!-- =============3=============== -->
+        <div class="footer-3 col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-3 col-xs-3">
+          <div class="f3-top">
+            <h5>Quick Links</h5>
+          </div>
+          <div class="f3-bottom">
+            <i class="fa-solid fa-angle-right"></i>
+            <a href="About.html">About Us</a> <br><br>
+            <i class="fa-solid fa-angle-right"></i>
+            <a href="contact.html">Contact Us</a> <br><br>
+            <i class="fa-solid fa-angle-right"></i>
+            <a href="#">Our Services</a> <br><br>
+            <i class="fa-solid fa-angle-right"></i>
+            <a href="#">Terms & Conditions</a> <br><br>
+            <i class="fa-solid fa-angle-right"></i>
+            <a href="#">Support</a> <br><br>
+          </div>
+        </div>
+        <!-- =============4=============== -->
+        <div class="footer-4 col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-3 col-xs-3">
+          <div class="f4-top">
+            <h5>Newsletter</h5>
+          </div>
+          <div class="f4-bottom">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Email" aria-label="Recipient's username"
+                aria-describedby="button-addon2">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Send</button>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <hr>
+          <p class="text-center">Copyright &copy;2023 All rights reserved | This template is made by <a href="#">Govind
+              Choudhary</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
